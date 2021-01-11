@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        .photo-frame{
+            width: 300px;
+            height: 250px;
+            position: relative;
+            border: 2px solid gold;
+            border-radius: 4px;
+            margin: 5px 10px;
+            overflow: hidden;
+            
+            
+        }
+        .photo-frame:hover .photo img{
+            transform: scale3d(1.3, 1.3, 1.3);
+            transition: transform 3s;
+        }
+        .photo-album{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .detail{
+            position: absolute;
+            width: 300px;
+            height: 230px;
+            top: 0;
+            display: none;
+        }
+        .photo-frame:hover .detail{
+            /* display: block; */
+            background-color: rgba(218, 165, 32, 0.26);
+            text-align: center;
+        }
+       
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>CSS Position with Photo Frrame</h2>
+        <div class="photo-album">
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/alamgir (6).jpg" alt="">
+            </div>
+           
+            <div class="detail">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem accusantium soluta consequatur, laborum ducimus fuga inventore minima iure at.</p>
+            </div>
+            
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/alamgir (7).jpg" alt="">
+            </div>
+           
+            <div class="detail">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem accusantium soluta consequatur, laborum ducimus fuga inventore minima iure at.</p>
+            </div>
+            
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/alamgir (8).jpg" alt="">
+            </div>
+           
+            <div class="detail">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem accusantium soluta consequatur, laborum ducimus fuga inventore minima iure at.</p>
+            </div>
+            
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/alamgir (9).jpg" alt="">
+            </div>
+           
+            <div class="detail">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem accusantium soluta consequatur, laborum ducimus fuga inventore minima iure at.</p>
+            </div>
+            
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/alamgir (10).jpg" alt="">
+            </div>
+           
+            <div class="detail">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem accusantium soluta consequatur, laborum ducimus fuga inventore minima iure at.</p>
+            </div>
+            
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/alamgir (3).jpg" alt="">
+            </div>
+           
+            <div class="detail">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem accusantium soluta consequatur, laborum ducimus fuga inventore minima iure at.</p>
+            </div>
+            
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/alamgir (4).jpg" alt="">
+            </div>
+           
+            <div class="detail">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem accusantium soluta consequatur, laborum ducimus fuga inventore minima iure at.</p>
+            </div>
+            
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/alamgir (5).jpg" alt="">
+            </div>
+           
+            <div class="detail">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem accusantium soluta consequatur, laborum ducimus fuga inventore minima iure at.</p>
+            </div>
+            
+        </div>
+    </div>
+        
+    </section>
+</body>
+</html>

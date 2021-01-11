@@ -1,0 +1,60 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding:0;
+    line-height: 1.5em;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+section{
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+
+}
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.one{
+    height:100px;
+    width:100px;
+    background-color:yellow;
+    position:fixed;
+    left:200px;
+    top:0;
+    text-align:center;
+    margin: 50px auto;
+    
+    }
+
+.two{
+    margin: auto;
+    height:100px;
+    width:100px;
+    background-color:green;
+    
+    }
+.three{
+    margin: auto;
+    height:100px;
+    width:100px;
+    background-color:blue;
+    
+    }
+.four{
+    margin: auto;
+    height:100px;
+    width:100px;
+    background-color:yellow;
+    
+    }
+.five{
+    margin: auto;
+    height:100px;
+    width:100px;
+    background-color:red;
+    
+    }
