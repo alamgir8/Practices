@@ -21,11 +21,15 @@
 // console.log(typeof alamgirNumber);
 // console.log(alamgirNumber+hanifNumber );
 
-var num =25.5;
-var num2 =60;
- var result=(num + num2);
+// var num =25.5;
+// var num2 =60;
+//  var result=(num + num2);
 
- console.log(result);
- var total = Math.random(result);
- console.log(total);
+//  console.log(result);
+//  var total = Math.random(result);
+//  console.log(total);
+
+var myName = "Alamgir Hossain";
+
+console.log(myName)
 
