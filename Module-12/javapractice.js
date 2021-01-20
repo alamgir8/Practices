@@ -64,114 +64,114 @@ function isLeapYear(year){
 
 //factorial value calculation
 //by for loop
-// let factorial = 10;
-// for (let i = 1; i <= 10; i++) {
-//     factorial = factorial * i;
-//     console.log(factorial);
+let factorial = 10;
+for (let i = 1; i <= 10; i++) {
+    factorial = factorial * i;
+    console.log(factorial);
     
-// }
+}
 
 // //by while loop
 
-// let i = 1;
-// let fact =1;
-// while (i <= 10) {
+let i = 1;
+let fact =1;
+while (i <= 10) {
     
-//     fact = fact * i;
-//     console.log(fact);
-//     i++;
+    fact = fact * i;
+    console.log(fact);
+    i++;
    
-// }
+}
 
 // //by function
 
-// function factorial2(n){
-//     let factorial2 = 1;
-//     for (let i = 1; i <= n; i++ ) {
-//         factorial2 = factorial2 * i;
+function factorial2(n){
+    let factorial2 = 1;
+    for (let i = 1; i <= n; i++ ) {
+        factorial2 = factorial2 * i;
         
         
-//     }
-//     return factorial2;
-// }
+    }
+    return factorial2;
+}
 
-// console.log(factorial2(0));
+console.log(factorial2(0));
 
 
-// function factorial (n){
-//   var i = 1; 
-//   var factorial = 1; 
-//   while (i<n){
-//     factorial =factorial*i; 
-//     i++;
-//   }
-//     return factorial;
-//   } 
-//   var result = factorial (5); 
-//   console.log(result);
+function factorial (n){
+  var i = 1; 
+  var factorial = 1; 
+  while (i<n){
+    factorial =factorial*i; 
+    i++;
+  }
+    return factorial;
+  } 
+  var result = factorial (5); 
+  console.log(result);
 
 //factorial by recursive method
-// function factorial(n) {
-//   if (n == 0) {
-//     return 1;
-//   }
-//   else{
-//     return n*factorial(n-1);
-//   }
-// }
+function factorial(n) {
+  if (n == 0) {
+    return 1;
+  }
+  else{
+    return n*factorial(n-1);
+  }
+}
 
-// console.log(factorial(10));
+console.log(factorial(10));
 
 
 //Fibonacci series
 //by for loop
-// fibo[2] = fibo[2-1] + fibo[2-2];
-// fibo[3] = fibo[3-1] + fibo[3-2];
-// fibo[n] = fibo[n-1] + fibo[n-2];
-// fibo[i] = fibo[i-1] + fibo[i-2];
+fibo[2] = fibo[2-1] + fibo[2-2];
+fibo[3] = fibo[3-1] + fibo[3-2];
+fibo[n] = fibo[n-1] + fibo[n-2];
+fibo[i] = fibo[i-1] + fibo[i-2];
 
-// let fibo = [0, 1];
-// for (let i = 2; i <=12; i++){
-//   fibo[i] = fibo[i-1] + fibo[i-2];
+let fibo = [0, 1];
+for (let i = 2; i <=12; i++){
+  fibo[i] = fibo[i-1] + fibo[i-2];
   
  
-// }
-// console.log(fibo);
-//by while loop
-// let fibo = [0,1];
-// while (condition) {
+}
+console.log(fibo);
+by while loop
+let fibo = [0,1];
+while (condition) {
   
-// }
+}
 
 //by function
 
-// function fibonacci(n) {
-//   var fibo = [0, 1];
-//   for (let i = 2; i <=n; i++) {
-//     fibo[i] = fibo[i-1] +fibo[i-2];
+function fibonacci(n) {
+  var fibo = [0, 1];
+  for (let i = 2; i <=n; i++) {
+    fibo[i] = fibo[i-1] +fibo[i-2];
     
-//   }
-//   return fibo;
-// }
-// console.log(fibonacci(12));
+  }
+  return fibo;
+}
+console.log(fibonacci(12));
 
 
   //recursive method fibonacci
 
-  // function fibonacci(n) {
-  //   if (n==0) {
-  //       return 0;   
-  //   }
-  //   if (n==1) {
-  //     return 1;
-  //   }
-  //   else{
-  //     return fibonacci(n-1) +fibonacci(n-2);
-  //   }
+  function fibonacci(n) {
+    if (n==0) {
+        return 0;   
+    }
+    if (n==1) {
+      return 1;
+    }
+    else{
+      return fibonacci(n-1) +fibonacci(n-2);
+    }
     
-  // }
+  }
 
-  // console.log(fibonacci(12));
+  console.log(fibonacci(12));
 
   //fibonacci series by recursive method
 

@@ -54,3 +54,4 @@ function factorialCheck(number) {
 }
 
 console.log(factorialCheck(10));
+
