@@ -1,5 +1,5 @@
 
-//by if else || simple method
+// //by if else || simple method
 let depth = 300;
 let animal = 0;
 
