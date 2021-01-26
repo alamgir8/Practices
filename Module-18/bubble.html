@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Javascript</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Hello World!</h1>
+        <ul id="first">
+            <li>list items-1</li>
+            <li>list items-2</li>
+            <li id="third">list items-3</li>
+            <li>list items-4</li>
+            <li>list items-5</li>
+            <li id="last">list items-6</li>
+        </ul>
+    </div>
+
+    <div class="container" id="item-list">
+        <ul id="my-list">
+            <li class="items">list items-1</li>
+            <li class="items">list items-2</li>
+            <li class="items">list items-3</li>
+            <li class="items">list items-4</li>
+            <li class="items">list items-5</li>
+        </ul>
+
+        <button id="addNew">Add Me</button>
+    </div>
+
+<script>
+
+    //function for last part
+    
+    // let items = document.getElementsByClassName('items');
+    // let items = document.getElementsByTagName('li'); //same as upper method
+    //         for (let i = 0; i < items.length; i++) {
+    //             const item = items[i];
+    //             // console.log(item);
+    //             item.addEventListener('click', function (event) {
+    //                 // console.log(this);
+    //                 // console.log(event.target); //same as this 
+    //                 // console.log(event.target.innerText);
+    //                 // console.log(event.target.parentNode);
+    //                     event.target.parentNode.removeChild(event.target);
+    //             })
+                
+    //         }
+
+            document.getElementById('addNew').addEventListener('click', function (event) {
+                let itemParent = document.getElementById('my-list');
+                let newItem = document.createElement('li');
+                newItem.innerText = 'This is new item';
+                itemParent.appendChild(newItem);
+            })
+
+            document.getElementById('my-list').addEventListener('click', function (event) {
+                // console.log(this, event.target);
+                event.target.parentNode.removeChild(event.target);
+            })
+
+
+
+// function for first part
+
+    const last = document.getElementById('last').addEventListener('click', function () {
+        console.log('you just clicked last items');
+    })
+
+    const first = document.getElementById('first').addEventListener('click', function () {
+        console.log('you just clicked UL');
+        event.stopPropagation(); 
+        //for stop bubble propagation.This one will stopping bubble propagation after click this button. other one will stop all bubble propagation after click/eventing this/that button(there two ways to stop bubble propagation one is 'stopPropagation', other is 'stopImmediatePropagation')
+    })
+
+    const container = document.getElementById('container').addEventListener('click', function () {
+        console.log('you just clicked container');
+    })
+</script>
+
+
+<!-- Propagating a bubble from lowest to the upward -->
+
+</body>
+</html>

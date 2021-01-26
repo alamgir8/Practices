@@ -1,0 +1,98 @@
+ <!-- when user clicks using a mouse, typing using a keyboard and website loading completed is called a website event. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in Javascript</title>
+</head>
+<body>
+    <!-- <button onclick="handleButton()">Click-me-1</button>
+    <button onmousedown="alert('You just mousedown')">Click-me-2</button>
+    <button onmouseover="alert('You just mouseover me')">Click-me-3</button>
+    <button>Click-me-4</button> -->
+
+    <!-- <script>
+        function handleButton() {
+            console.log('You just clicked me');
+        }
+    </script>
+     -->
+
+
+    <h1>Hello I'm Alamgir Hossain.</h1>
+    <button id="first-button">Click me-1</button>
+    <button id="second-button">Click me-2</button>
+    <button id="third-button">Click me-3</button>
+    <button id="fourth-button">Click me-4</button>
+    <button id="fifth-button">Click me-5</button>
+    <button id="sixth-button">Click me-6</button>
+    <button id="seven-button">Click me-7</button>
+    <button id="eight-button">Click me-8</button>
+    <script>
+        function redColor() {
+            document.body.style.backgroundColor = 'darkred';
+        }
+        function whiteColor() {
+            document.body.style.backgroundColor = 'white';
+        }
+        function greenColor() {
+            document.body.style.backgroundColor = 'green';
+
+        }
+        function blueColor() {
+            document.body.style.backgroundColor = 'lightblue';
+            
+        }
+        function yellowColor() {
+            document.body.style.backgroundColor = 'yellow';
+            
+        }
+        function tomatoColor() {
+            document.body.style.backgroundColor = 'tomato';
+            
+        }
+        function cyanColor() {
+            document.body.style.backgroundColor = 'cyan';
+            
+        }
+        function pinkColor() {
+            document.body.style.backgroundColor = ' pink';
+            
+        }
+
+
+       
+        const firstButton = document.getElementById('first-button');
+              firstButton.onclick = whiteColor;{
+              console.log('I am first button'); 
+           }
+
+        const secondButton = document.getElementById('second-button');
+                secondButton.onclick = redColor;
+                   
+        const thirdButton = document.getElementById('third-button');
+              thirdButton.addEventListener('click', blueColor);
+
+            // same as upper example you can use like this
+             fourthButton = document.getElementById('fourth-button');
+                fourthButton.addEventListener('click', greenColor);
+
+                // you can also use like this or doing like this
+              fifthButton = document.getElementById('fifth-button').addEventListener('click', yellowColor);;
+                
+        
+        const sixthButton = document.getElementById('sixth-button');
+                sixthButton.addEventListener('click', tomatoColor); 
+                
+                
+        const seventhButton = document.getElementById('seven-button');
+                seventhButton.addEventListener('click', cyanColor);
+
+        const lastButton = document.getElementById('eight-button');
+              lastButton.onclick = pinkColor;
+        
+    </script>
+    
+</body>
+</html>
