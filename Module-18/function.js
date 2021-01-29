@@ -1,3 +1,4 @@
+// i can call a function from another function, i can pas function as a function parameter. i return multiple in a function.
 function evenly(num) {
     if (num % 2 == 0) {
         console.log(num, ': this is a even age'); 
