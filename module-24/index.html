@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <h1>Javascript JSON</h1>
+    <p>JSON means JavaScript Object Notation</p>
+    <ul id="list-container">
+
+    </ul>
+    
+    <script>
+        let person = {
+            id: 12,
+            name: 'Alamin',
+            school: 'Tongi Govt College',
+            friends:['Alamin', 'Rasel', 'Hanif', 'Aminul'],
+            friend:{
+                name: 'Rasel',
+                works: 'Hujur',
+                age: 28,
+            },
+            number:[10, 20, 30, 40, 50],
+        }
+        const convertJson = JSON.stringify(person); // to convert basic array to jason method,এইভাবে সার্ভার থেকে ডাটাগুলো লোড হয়ে থাকে, String হয়ে । 
+        console.log(convertJson); 
+
+        const convertFromJson = JSON.parse(convertJson); //this is method to convert server data ,এইভাবে সার্ভার থেকে লোডকৃত ডাটাগুলো basic array এর মতো করতে হয় ।
+        console.log(convertFromJson);
+
+        //সার্ভার থেকে ডাটা লোড করার উপায়
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(json => getUser(json))
+        .catch(error => console.log(error))// যদি কোন request ডাটা না পাওয়া যায় সেক্ষেত্রে একটা error দিবে আর error টা কেনো দিচ্ছে সেটা জানার জন্য এইটা ব্যবহার করা হয় ।
+
+        function getUser(users) {
+            console.log('Users:', users);
+            
+            const userName = users.map(user => user.username); // username পাওয়ার জন্য map এবং arrow function এর মাধ্যেমে লুপ করে username বের করা হয়েছে।
+            console.log(userName);
+           
+            for (let i = 0; i < userName.length; i++) { //userName এর মধ্যে থেকে শুধু username গুলোকে বের করার জন্য লুপ করা হয়েছে।
+                const username = userName[i];
+
+                const listItems = document.createElement('li'); // html file এর মধ্যে javascript দিয়ে list items তৈরি করা হয়েছে।
+                listItems.innerText = username; //list items গুলোর value হিসাবে username কে set করে দেয়া হয়েছে, যেহেতু আমরা শুধু username কে সংগ্রহ করছি।
+                const ul = document.getElementById('list-container'); // list items গুলোকে html file এ সেটা করার জন্য সেখান থেকে id এর মাধ্যেমে ul কে দরে তার মধ্যে তার নিজের child হিসাবে lits items গুলোকে দেয়া হয়েছে। 
+                ul.appendChild(listItems);
+
+                
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
