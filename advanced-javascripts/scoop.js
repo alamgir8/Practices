@@ -1,0 +1,2 @@
+//একটা variable  কোন কোন যায়গা থেকে access করা যাবে সেটা যে system এ হয় তাকে scoop বলে। scoop মুলত দুই প্রকার global scoop এবং local scoop.
+//global scoop হচ্ছে block এর বাহিরে declare করা হয় আর local scoop ব্লক এর ভেতরে declare করা হয়।  
