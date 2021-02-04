@@ -40,7 +40,7 @@
         //সার্ভারে ডাটা পাঠানোর উপায়
         document.getElementById('submit').addEventListener('click', function () {
            const title = document.getElementById('title').value;
-          const bodyContent = document.getElementById('body-content').value;
+            const bodyContent = document.getElementById('body-content').value;
             const postInfo ={title: title, body:bodyContent};
             postContentToServer(postInfo);
         })

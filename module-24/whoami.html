@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Who Am I</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Who You Are?</h1>
+        <h2>Answer : <span id="who-am-i"></span></h2>
+    </div>
+
+    <script>
+        function getUserName(name) {
+            fetch('https://randomuser.me/api')
+            .then(response => response.json())
+            .then(data => {
+
+            const user = data.results[0].name;
+            const fullName = `${user.title} ${user.first} ${user.last}`
+            
+            document.getElementById('who-am-i').innerText = fullName;
+        })
+        }
+        getUserName();
+        setInterval(() => {
+           getUserName(); 
+        }, 2000);
+    </script>
+</body>
+</html>
