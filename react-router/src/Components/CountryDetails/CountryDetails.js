@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import CountryInfo from '../CountryInfo/CountryInfo';
+import Header from '../Header/Header';
 
 const CountryDetails = () => {
     const {name} = useParams();
@@ -16,10 +17,12 @@ const CountryDetails = () => {
     }, [])
     return (
         <div>
-            <h3>Country Details of <strong>{name}</strong> </h3>
-            {
-                country.map(countryInfo => <CountryInfo key={countryInfo.alpha2Code} countryInfo={countryInfo}></CountryInfo>)
-            }
+            <Header></Header>
+                <div className='container'>
+                    {
+                    country.map(countryInfo => <CountryInfo key={countryInfo.alpha2Code} countryInfo={countryInfo}></CountryInfo>)
+                    }
+                </div>
         </div>
     );
 };

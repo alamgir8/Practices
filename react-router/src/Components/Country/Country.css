@@ -1,6 +1,15 @@
-.container{
-    width: 80%;
-    margin: 20px auto;
-    border: 2px solid gold;
+
+.main-button{
+    padding:8px 18px;
+    font-size: 14px;
+    line-height:23px;
+    font-weight: 500;
+    background: #007EFF;
+    color: #ffffff;
     border-radius: 5px;
+    border: none;
+}
+.main-button:hover{
+    background:#3563FA;
+    color: #ffffff;
 }

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Country from '../Country/Country';
+import Header from '../Header/Header';
+import {  } from "./Header.css";
 
 const Home = () => {
     const [countries, setCountries] = useState([]);
@@ -15,12 +17,16 @@ const Home = () => {
 
     
     return (
-        <div>
-            <h3>This is home section</h3>
-            <h4>Country : {countries.length}</h4>
-            {
-                countries.map(country => <Country country={country} key={country.alpha3Code}></Country>)
-            }
+        
+        <div >
+             <Header></Header>
+             <div className='container'>
+                <div className='row'>
+                {
+                    countries.map(country => <Country country={country} key={country.alpha3Code}></Country>)
+                }
+                </div>
+            </div> 
         </div>
     );
 };

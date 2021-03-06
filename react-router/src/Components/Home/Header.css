@@ -1,0 +1,11 @@
+.container-header{
+    margin-bottom: 100px;
+}
+#navbar h2, h5{
+    cursor: pointer;
+    color: #ffffff;
+}
+.header{
+    background-color: #FF5166;
+    
+}
