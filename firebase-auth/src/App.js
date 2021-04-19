@@ -60,29 +60,16 @@ function App() {
     .auth()
     .signInWithPopup(fbProvider)
     .then((result) => {
-      /** @type {firebase.auth.OAuthCredential} */
       var credential = result.credential;
-  
-      // The signed-in user info.
       var user = result.user;
-  
-      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
       var accessToken = credential.accessToken;
-      console.log(user);
-  
-      // ...
     })
     .catch((error) => {
-      // Handle Errors here.
-      var errorCode = error.code;
+       var errorCode = error.code;
       var errorMessage = error.message;
-      // The email of the user's account used.
-      var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
+       var email = error.email;
       var credential = error.credential;
-  
-      // ...
-    });
+     });
 
   }
 
@@ -106,7 +93,7 @@ function App() {
     }
   };
   const handleSubmit = (e) => {   
-    if (nUser &&user.email && user.password) {
+    if (nUser && user.email && user.password) {
       firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
     .then((res) => {
       const newUser = {...user};
@@ -116,14 +103,12 @@ function App() {
       updateUserName(user.name)
   })
   .catch((error) => {
-    const newUser = {...user}
-  
+    const newUser = {...user};
     var errorCode = error.code;
     var errorMessage = error.message;
     newUser.error = errorCode && errorMessage;
     newUser.success = false;
    setUser(newUser);
-    // ..
   });
      
   }
@@ -138,14 +123,12 @@ function App() {
       updateUserName(user.name)
   })
   .catch((error) => {
-    const newUser = {...user}
-  
+    const newUser = {...user};
     var errorCode = error.code;
     var errorMessage = error.message;
     newUser.error = errorCode && errorMessage;
     newUser.success = false;
    setUser(newUser);
-    // ..
   });
   }
   
@@ -158,11 +141,11 @@ function App() {
     user.updateProfile({
       displayName: name,
       
-    }).then(function() {
-      // Update successful.
+    })
+    .then(function() {
       console.log('user name update successfully');
-    }).catch(function(error) {
-      // An error happened.
+    })
+    .catch(function(error) {
       console.log(error);
     });
   }
@@ -181,9 +164,6 @@ function App() {
         </div>
       } <br/><br/><br/>
       <h2>Form Validation</h2>
-      {/* <p>Name : {user.name}</p>
-      <p>Email : {user.email}</p>
-      <p>Password : {user.password}</p> */}
       <form onSubmit={handleSubmit}>
         <input onChange={() => setNUser(!nUser)} type="checkbox" name="nUser" id=""/>
         <label htmlFor="nUser">Sign In For New User</label><br/><br/>
